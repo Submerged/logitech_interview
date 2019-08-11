@@ -43,19 +43,19 @@ I tried to stick to the basics here and not get too fancy. My primary concern wa
 4. There is a single class of Employee. If we wanted to get fancier we  may make Employee an abstract class and subclass it for other types of Employees like CEO, VP, Manager since they all come with their own behaviour / data I'm sure. Again, outside of the scope of this question.
 ### Sample Output
 ```
---John Last
+--John
 Subordinates:
-	Mary Last
+	Mary
 
-	--Mary Last
+	--Mary
 	Subordinates:
-		Sam Last
-		Will Last
+		Sam
+		Will
 
-		--Will Last
+		--Will
 		Subordinates:
-			Jackie Last
-			Frank Last
-	Peter Last
-	Michael Last
+			Jackie
+			Frank
+	Peter
+	Michael
 ```
