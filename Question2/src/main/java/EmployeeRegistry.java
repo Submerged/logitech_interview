@@ -1,3 +1,9 @@
+/**
+ *
+ * @author Derek Leblanc
+ * @date August 11 / 2019
+ * @description Employee Registry class which is a mediator for the organizational structure
+ */
 
 import java.util.HashMap;
 import org.apache.commons.lang.Validate;

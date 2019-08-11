@@ -1,16 +1,14 @@
+/**
+ *
+ * @author Derek Leblanc
+ * @date August 11 / 2019
+ * @description Employee class for organization
+ */
+
 
 import java.util.ArrayList;
 import org.apache.commons.lang3.Validate;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author derekleblanc
- */
 public class Employee {
     private int age;
     private String employeeID;
@@ -121,7 +119,7 @@ public class Employee {
      * Set the employee's given name
      * @param givenName AKA first name
      */
-    public void setGivenName(String givenName) {
+    private void setGivenName(String givenName) {
         this.givenName = givenName;
     }
     

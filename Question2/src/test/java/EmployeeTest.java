@@ -1,8 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *
+ * @author Derek Leblanc
+ * @date August 11 / 2019
+ * @description Test cases for Employee class
  */
+
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -108,16 +110,6 @@ public class EmployeeTest {
     public void testGetGivenName() {
         Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("Derek", genericEmployee.getGivenName());
-    }
-
-    /**
-     * Test of setGivenName method, of class Employee.
-     */
-    @Test
-    public void testSetGivenName() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
-        genericEmployee.setGivenName("Darren");
-        assertEquals("Darren", genericEmployee.getGivenName());
     }
 
     /**

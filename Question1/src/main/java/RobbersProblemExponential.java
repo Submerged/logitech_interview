@@ -2,16 +2,11 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Vector;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author derekleblanc
+ * @author Derek Leblanc
+ * @date August 11 / 2019
+ * @description Robbers Problem solved in exponential time. First attempt 
  */
 public class RobbersProblemExponential {
      

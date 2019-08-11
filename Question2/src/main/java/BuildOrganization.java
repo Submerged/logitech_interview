@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author derekleblanc
+ * @author Derek Leblanc
+ * @date August 11 / 2019
+ * @description Launch point of Question 2. Builds the organizational structure and prints it out
  */
+
 public class BuildOrganization {
     public static void main(String args[]) {
         
