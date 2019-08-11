@@ -12,9 +12,9 @@ import org.apache.commons.lang.Validate;
  *
  * @author derekleblanc
  */
-public class OrganizationalChart {
+public class EmployeeRegistry {
     private HashMap<String, Employee> employees;
-    public OrganizationalChart(Employee root){        
+    public EmployeeRegistry(Employee root){        
         Validate.notNull(root, "Root of org structure cannot be null");
         
         this.employees = new HashMap<>();
@@ -25,10 +25,11 @@ public class OrganizationalChart {
         if(employees.containsKey(newEmployee.getGivenName())){
             throw new IllegalArgumentException ("This implementation is limited and requires a unique given(first) name per employee");
         }
+        employees.put(newEmployee.getGivenName(), newEmployee);
+        
         Employee boss = this.employees.get(bossFirstName);
         Validate.notNull(boss, String.format("Can't link to boss [ %s ] who doesn't exist", bossFirstName));
         boss.addSubordinate(newEmployee);
-        employees.put(newEmployee.getGivenName(), newEmployee);
     }
     
     public Employee getEmployeeByGivenName(String givenName){

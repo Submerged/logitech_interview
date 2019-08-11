@@ -21,7 +21,7 @@ public class Employee {
     private String address;
     private String postalCode;
     private Employee currentBoss;
-    private ArrayList<Employee> currentReports;
+    private ArrayList<Employee> currentReports = new ArrayList<>();;
     
     public Employee(int age, 
                     String employeeID, 
@@ -30,8 +30,7 @@ public class Employee {
                     String country, 
                     String geographicRegion, 
                     String address,
-                    String postalCode,
-                    ArrayList<Employee> currentReports){
+                    String postalCode){
         
         //Validate fields to make sure we're not passed null or blank values
         Validate.notNull(employeeID, "Employee ID cann't be null");
@@ -57,21 +56,7 @@ public class Employee {
         this.geographicRegion = geographicRegion;
         this.address = address;
         this.postalCode = postalCode;
-        this.currentReports = new ArrayList<>();
         
-        //Add all subordinates that are linked to this employee on instantiation
-        this.currentReports.forEach(subordinate -> {
-            Validate.notNull(subordinate);
-            this.currentReports.add(subordinate);
-        });
-        
-    }
-    
-    //Adds a single subordinate to this employee
-    public void addSubordinate(Employee subordinate){
-        Validate.notNull(subordinate, "Cannot add a null subordiante");
-        this.currentReports.add(subordinate);
-        subordinate.setCurrentBoss(this);
     }
     
     public int getAge() {
@@ -154,6 +139,20 @@ public class Employee {
         this.currentReports.forEach(subordinate -> tempSubordinates.addAll(subordinate.getSubordinates()));
         return tempSubordinates;
         
+    }
+    
+    //Adds a single subordinate to this employee
+    public void addSubordinate(Employee subordinate){
+        Validate.notNull(subordinate, "Cannot add a null subordiante");
+        this.currentReports.add(subordinate);
+        subordinate.setCurrentBoss(this);
+    }
+    
+    public void addSubordinates(ArrayList<Employee> subordinates) {
+        subordinates.forEach(subordinate -> {
+            Validate.notNull(subordinate);
+            this.currentReports.add(subordinate);
+        });
     }
     
     /*

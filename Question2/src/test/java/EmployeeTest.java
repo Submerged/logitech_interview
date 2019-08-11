@@ -21,7 +21,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetAge() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals(35, genericEmployee.getAge());
     }
 
@@ -30,7 +30,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetAge() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setAge(40);
         assertEquals(40, genericEmployee.getAge());
     }
@@ -40,7 +40,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetEmployeeID() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("0000-01", genericEmployee.getEmployeeID());
     }
 
@@ -49,7 +49,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetEmployeeID() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setEmployeeID("0000-02");
         assertEquals("0000-02", genericEmployee.getEmployeeID());
     }
@@ -59,7 +59,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetFamilyName() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("Leblanc", genericEmployee.getFamilyName());
     }
 
@@ -68,7 +68,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetFamilyName() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setFamilyName("White");
         assertEquals("White", genericEmployee.getFamilyName());
     }
@@ -78,7 +78,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetGivenName() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("Derek", genericEmployee.getGivenName());
     }
 
@@ -87,7 +87,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetGivenName() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setGivenName("Darren");
         assertEquals("Darren", genericEmployee.getGivenName());
     }
@@ -97,7 +97,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetCountry() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("Canada", genericEmployee.getCountry());
     }
 
@@ -106,7 +106,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetCountry() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setCountry("United States");
         assertEquals("United States", genericEmployee.getCountry());
     }
@@ -116,7 +116,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetGeographicRegion() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("BC", genericEmployee.getGeographicRegion());
     }
 
@@ -125,7 +125,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetGeographicRegion() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setGeographicRegion("NS");
         assertEquals("NS", genericEmployee.getGeographicRegion());
     }
@@ -135,7 +135,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetAddress() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("1373 West 73rd AVE", genericEmployee.getAddress());
     }
 
@@ -144,7 +144,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetAddress() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setAddress("123-1000 Burnaby ST");
         assertEquals("123-1000 Burnaby ST", genericEmployee.getAddress());
     }
@@ -154,7 +154,7 @@ public class EmployeeTest {
      */
     @Test
     public void testGetPostalCode() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         assertEquals("V6P3E9", genericEmployee.getPostalCode());
     }
 
@@ -163,7 +163,7 @@ public class EmployeeTest {
      */
     @Test
     public void testSetPostalCode() {
-        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9", null);
+        Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setPostalCode("L4N 6V5");
         assertEquals("L4N 6V5", genericEmployee.getPostalCode());
     }
