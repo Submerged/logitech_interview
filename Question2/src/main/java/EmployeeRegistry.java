@@ -23,6 +23,11 @@ public class EmployeeRegistry {
         this.CEO = root;
     }
     
+    /**
+     * Adds a single employee to the registry and link them to their boss
+     * @param newEmployee employee we want to add to organization
+     * @param bossFirstName who the boss of this employee is. 
+     */
     public void addEmployee(Employee newEmployee, String bossFirstName){
         if(employees.containsKey(newEmployee.getGivenName())){
             throw new IllegalArgumentException ("This implementation is limited and requires a unique given(first) name per employee");
@@ -34,6 +39,11 @@ public class EmployeeRegistry {
         boss.addSubordinate(newEmployee);
     }
     
+    /**
+     * Retrieves a single employee based on their first name or throws error if key doesn't exist
+     * @param givenName AKA first name of a person
+     * @return single found employee object
+     */
     public Employee getEmployeeByGivenName(String givenName){
         if(!employees.containsKey(givenName)){
             throw new IllegalArgumentException (String.format("There is no employee in the organizational structure named [ %s ]", givenName));
@@ -41,17 +51,28 @@ public class EmployeeRegistry {
         return this.employees.get(givenName);
     }
     
+    /**
+     * Return the count of employees in the registry
+     * @return employee count
+     */
     public int getEmployeeCount(){
         return this.employees.size();
     }
     
+    /**
+     * Helper function to print the entire organization, starting with the CEO
+     */
     public void printOrganization(){
-        //Start with CEO and traverse the org structure using DFS with printing
         depthFirstPrintSubordinates(this.CEO, 0);
     }
     
+    /**
+     * Traverse the hierarchy using DFS and print subordinates at the same time
+     * @param employee the employee object (node) in the traversal 
+     * @param depth used mostly to indent our hierarchy, but indicates what depth of the travesral we're on
+     */
     private void depthFirstPrintSubordinates(Employee employee, int depth) {
-        if(employee.getSubordinates().isEmpty()) {
+        if(employee.getSubordinates().isEmpty()) { // Explicit Stop condition
             return;
         }
         System.out.println();
