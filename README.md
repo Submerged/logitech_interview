@@ -6,7 +6,7 @@
 ### How to run
 This question uses a maven-based project that was written and tested in NetBeans 11.1 with Java 12. I make use of some Java 8+ concepts like Lambda functions and stream().
 
-The pom.xml file is included which encapsulates and dependencies.
+The pom.xml file is included which encapsulates the dependencies.
 
 The Launch.java file contains our main method and runs a simple and a more complex example of the problem being solved.
 ### Approach
@@ -28,7 +28,7 @@ Maximum we can steal from [1, 2, 3, 1] is 4
 ### How to run
 This question uses a maven-based project that was written and tested in NetBeans 11.1 with Java 12. I make use of some Java 8+ concepts like Lambda functions and stream().
 
-The pom.xml file is included which encapsulates and dependencies. The only one I used in the main application is apache-lang to provide some quick notNull and notBlank validation in my constructor
+The pom.xml file is included which encapsulates the dependencies. The only library I used in the main application is apache-lang to provide some quick validation in my constructor (notBlank, notNull..etc)
 
 The BuildOrganization.java file contains the main method and create the organizational structure that was asked for and prints it out afterwards.
 ### Approach
