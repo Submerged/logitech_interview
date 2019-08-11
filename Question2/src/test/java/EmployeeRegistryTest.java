@@ -22,7 +22,7 @@ public class EmployeeRegistryTest {
         });
     }
     /**
-     * Test of addEmployee method, of class OrganizationChart.
+     * Test of addEmployee method, of class EmployeeRegisty.
      */
     @Test
     public void testEmployeeBoss() {
@@ -37,7 +37,7 @@ public class EmployeeRegistryTest {
     }
 
     /**
-     * Test of getEmployeeByGivenName method, of class OrganizationChart.
+     * Test of getEmployeeByGivenName method, of class EmployeeRegisty.
      */
     @Test
     public void testGetEmployeeByGivenName() {
@@ -53,7 +53,7 @@ public class EmployeeRegistryTest {
     }
 
     /**
-     * Test of getEmployeeCount method, of class OrganizationChart.
+     * Test of getEmployeeCount method, of class EmployeeRegisty.
      */
     @Test
     public void testGetEmployeeCount() {
@@ -69,5 +69,20 @@ public class EmployeeRegistryTest {
         assertEquals(4, employeeRegistry.getEmployeeCount());
     }
     
-    
+    /**
+     * Test of adding a duplicate employee of class EmployeeRegisty
+     */
+    @Test
+    public void testAddDuplicateEmployee() {
+        Employee genericCEO = new Employee(35, "0000-00", "Last", "John", "Canada", "BC", "123 White ST", "V6P 3E9");
+        EmployeeRegistry employeeRegistry = new EmployeeRegistry(genericCEO);
+        
+        Employee genericEmployee = new Employee(35, "0000-01", "Last", "Benedict", "Canada", "BC", "123 White ST", "V6P 3E9");
+        employeeRegistry.addEmployee(genericEmployee, "John");
+        assertThrows(IllegalArgumentException.class, () -> {
+            //Try adding employee again with same credentials
+            employeeRegistry.addEmployee(genericEmployee, "John");
+        });
+        
+    }
 }
