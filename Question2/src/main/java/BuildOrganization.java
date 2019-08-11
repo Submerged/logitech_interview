@@ -36,10 +36,6 @@ public class BuildOrganization {
         employeeRegistry.addEmployee(employeeJackie, "Will");
         employeeRegistry.addEmployee(employeeFrank, "Will");
         
-        
-        //Output current reports of an employee
-        //employeeRegistry.getEmployeeByGivenName("John").printSubordinates();
-        
         //Print entire org structure
         employeeRegistry.printOrganization();
     }

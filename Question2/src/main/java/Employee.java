@@ -35,6 +35,7 @@ public class Employee {
         //Validate fields to make sure we're not passed null or blank values
         Validate.inclusiveBetween(16, 110, age, "Age must be between 16 and 110 -- Inclusive");
         Validate.notNull(employeeID, "Employee ID cann't be null");
+        Validate.notBlank(employeeID, "Employee ID cann't be blank");
         Validate.notNull(familyName);
         Validate.notBlank(familyName, "Family Name cannot be blank");
         Validate.notNull(givenName);

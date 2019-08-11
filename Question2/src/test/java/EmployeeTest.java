@@ -6,7 +6,6 @@
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 /**
  *
  * @author derekleblanc
@@ -195,6 +194,76 @@ public class EmployeeTest {
         Employee genericEmployee = new Employee(35, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
         genericEmployee.setPostalCode("L4N 6V5");
         assertEquals("L4N 6V5", genericEmployee.getPostalCode());
+    }
+    
+    /**
+     * Test of null instantiation of class Employee.
+     */
+    @Test
+    public void testNullInstantiation() {
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, null, "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", null, "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", null, "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", null, "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "Canada", null, "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "Canada", "BC", null, "V6P3E9");
+        });
+        
+        assertThrows(NullPointerException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "Canada", "BC", "123 Street", null);
+        });
+        
+    }
+    
+    /**
+     * Test of null instantiation of class Employee.
+     */
+    @Test
+    public void testEmptyInstantiation() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "Canada", "", "1373 West 73rd AVE", "V6P3E9");
+        });
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "Canada", "BC", "", "V6P3E9");
+        });
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(35, "0000-00", "Leblanc", "Derek", "Canada", "BC", "123 Street", "");
+        });
+        
     }
     
 }
