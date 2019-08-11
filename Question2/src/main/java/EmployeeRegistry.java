@@ -14,11 +14,13 @@ import org.apache.commons.lang.Validate;
  */
 public class EmployeeRegistry {
     private HashMap<String, Employee> employees;
+    private Employee CEO;
     public EmployeeRegistry(Employee root){        
         Validate.notNull(root, "Root of org structure cannot be null");
         
         this.employees = new HashMap<>();
         this.employees.put(root.getGivenName(), root);
+        this.CEO = root;
     }
     
     public void addEmployee(Employee newEmployee, String bossFirstName){
@@ -41,6 +43,24 @@ public class EmployeeRegistry {
     
     public int getEmployeeCount(){
         return this.employees.size();
+    }
+    
+    public void printOrganization(){
+        //Start with CEO and traverse the org structure using DFS with printing
+        depthFirstPrintSubordinates(this.CEO, 0);
+    }
+    
+    private void depthFirstPrintSubordinates(Employee employee, int depth) {
+        if(employee.getSubordinates().isEmpty()) {
+            return;
+        }
+        System.out.println();
+        System.out.println(String.format("%s--%s %s", "\t".repeat(depth), employee.getGivenName(), employee.getFamilyName()));
+        System.out.println(String.format("%sSubordinates:", "\t".repeat(depth)));
+        employee.getSubordinates().forEach(subordinate -> {
+            System.out.println(String.format("\t%s%s %s", "\t".repeat(depth), subordinate.getGivenName(), subordinate.getFamilyName()));
+            depthFirstPrintSubordinates(subordinate, depth+1);
+        });
     }
     
 }

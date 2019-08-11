@@ -36,6 +36,35 @@ public class EmployeeTest {
     }
 
     /**
+     * Test of setAge method to make sure an error is thrown on the high end of being out of bounds
+     */
+    @Test
+    public void testSetAgeHigh() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(111, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+    }
+    
+    /**
+     * Test of setAge method to make sure an error is thrown on the high end of being out of bounds
+     */
+    @Test
+    public void testSetAgeLow() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(14, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+    }
+    
+    /**
+     * Test of setAge method to make sure an error is thrown on the high end of being out of bounds
+     */
+    @Test
+    public void testSetAgeNegative() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            Employee genericEmployee = new Employee(-10, "0000-01", "Leblanc", "Derek", "Canada", "BC", "1373 West 73rd AVE", "V6P3E9");
+        });
+    }
+    /**
      * Test of getEmployeeID method, of class Employee.
      */
     @Test

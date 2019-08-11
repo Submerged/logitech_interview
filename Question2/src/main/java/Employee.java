@@ -33,6 +33,7 @@ public class Employee {
                     String postalCode){
         
         //Validate fields to make sure we're not passed null or blank values
+        Validate.inclusiveBetween(16, 110, age, "Age must be between 16 and 110 -- Inclusive");
         Validate.notNull(employeeID, "Employee ID cann't be null");
         Validate.notNull(familyName);
         Validate.notBlank(familyName, "Family Name cannot be blank");
@@ -135,9 +136,7 @@ public class Employee {
     }
 
     public ArrayList<Employee> getSubordinates(){
-        ArrayList<Employee> tempSubordinates = new ArrayList<>();
-        this.currentReports.forEach(subordinate -> tempSubordinates.addAll(subordinate.getSubordinates()));
-        return tempSubordinates;
+        return this.currentReports;
         
     }
     

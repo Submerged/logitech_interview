@@ -38,10 +38,9 @@ public class BuildOrganization {
         
         
         //Output current reports of an employee
-        employeeRegistry.getEmployeeByGivenName("Mary").setGivenName("Mary-Anne");
-        employeeRegistry.getEmployeeByGivenName("Mary").printSubordinates();
+        //employeeRegistry.getEmployeeByGivenName("John").printSubordinates();
         
-        
-        
+        //Print entire org structure
+        employeeRegistry.printOrganization();
     }
 }
