@@ -23,23 +23,23 @@ public class RobbersProblemTest {
      */
     @Test
     public void testMaximizeTheftInefficient1() {
-        RobbersProblem robbersProblem = new RobbersProblem();
+        RobbersProblemExponential robbersProblem = new RobbersProblemExponential();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(1,2,3,1));
-        assertEquals(4, robbersProblem.maximizeTheft(housesAndValues));
+        assertEquals(4, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftInefficient2() {
-        RobbersProblem robbersProblem = new RobbersProblem();
+        RobbersProblemExponential robbersProblem = new RobbersProblemExponential();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(1,2,3,10));
-        assertEquals(12, robbersProblem.maximizeTheft(housesAndValues));
+        assertEquals(12, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftInefficient3() {
-        RobbersProblem robbersProblem = new RobbersProblem();
+        RobbersProblemExponential robbersProblem = new RobbersProblemExponential();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,8,9,12));
-        assertEquals(33, robbersProblem.maximizeTheft(housesAndValues));
+        assertEquals(33, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     
@@ -50,23 +50,30 @@ public class RobbersProblemTest {
      */
     @Test
     public void testMaximizeTheftEfficient1() {
-        RobbersProblem robbersProblem = new RobbersProblem();
+        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(1,2,3,1));
-        assertEquals(4, robbersProblem.maximizeTheftEfficient(housesAndValues));
+        assertEquals(4, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftEfficient2() {
-        RobbersProblem robbersProblem = new RobbersProblem();
+        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(1,2,3,10));
-        assertEquals(12, robbersProblem.maximizeTheftEfficient(housesAndValues));
+        assertEquals(12, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftEfficient3() {
-        RobbersProblem robbersProblem = new RobbersProblem();
+        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,8,9,12));
-        assertEquals(33, robbersProblem.maximizeTheftEfficient(housesAndValues));
+        assertEquals(33, robbersProblem.maximizeThievery(housesAndValues));
+    }
+    
+    @Test
+    public void testMaximizeTheftEfficient4() {
+        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
+        Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,8,9,12,1,2,3,12,3,12,32,1,102,1000,2,2,1,2,101,1000,100));
+        assertEquals(2083, robbersProblem.maximizeThievery(housesAndValues));
     }
     
 }
