@@ -221,7 +221,7 @@ public class Employee {
      * @param subordinate The employee object that is the subordinate
      */
     public void addSubordinate(Employee subordinate){
-        Validate.notNull(subordinate, "Cannot add a null subordiante");
+        Validate.notNull(subordinate, "Cannot add a null subordinate");
         this.currentReports.add(subordinate);
         subordinate.setCurrentBoss(this);
     }

@@ -14,7 +14,11 @@ import java.util.Vector;
  * @author derekleblanc
  */
 public class RobbersProblem {
-
+    
+    public int maximizeTheftIdeal(Vector<Integer> housesAndValues) {
+       return 0;
+    }
+    
     /**
      * Accepts a vector of houses and their respective values. The goal here is to maximize the amount
      * of money we steal without robbing two adjacent houses and alerting the police
