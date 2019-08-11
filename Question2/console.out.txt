@@ -1,0 +1,32 @@
+cd /Users/derekleblanc/Documents/repos/personal/interviews/logitech_interview/Question2; JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.jdk/Contents/Home "/Applications/NetBeans/Apache NetBeans 11.1.app/Contents/Resources/NetBeans/java/maven/bin/mvn" "-Dexec.args=-classpath %classpath BuildOrganization" -Dexec.executable=/Library/Java/JavaVirtualMachines/jdk-12.jdk/Contents/Home/bin/java org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building Question2 1.0-SNAPSHOT
+------------------------------------------------------------------------
+
+--- exec-maven-plugin:1.5.0:exec (default-cli) @ Question2 ---
+
+--John Last
+Subordinates:
+	Mary Last
+
+	--Mary Last
+	Subordinates:
+		Sam Last
+		Will Last
+
+		--Will Last
+		Subordinates:
+			Jackie Last
+			Frank Last
+	Peter Last
+	Michael Last
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 0.527 s
+Finished at: 2019-08-11T15:54:31-03:00
+Final Memory: 7M/37M
+------------------------------------------------------------------------

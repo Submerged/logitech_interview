@@ -19,7 +19,7 @@ public class RobbersProblemTest {
     }
 
     /**
-     * Test of maximizeTheft method, of class RobbersProblem.
+     * Test of maximizeThievery method, of class RobbersProblem.
      */
     @Test
     public void testMaximizeTheftInefficient1() {
@@ -46,34 +46,61 @@ public class RobbersProblemTest {
     // Test more efficient implementation
     
     /**
-     * Test of maximizeTheft method, of class RobbersProblem.
+     * Test of maximizeThievery method, of class RobbersProblem.
      */
     @Test
     public void testMaximizeTheftEfficient1() {
-        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
+        RobbersProblemLinear robbersProblem = new RobbersProblemLinear();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(1,2,3,1));
         assertEquals(4, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftEfficient2() {
-        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
+        RobbersProblemLinear robbersProblem = new RobbersProblemLinear();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(1,2,3,10));
         assertEquals(12, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftEfficient3() {
-        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
+        RobbersProblemLinear robbersProblem = new RobbersProblemLinear();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,8,9,12));
         assertEquals(33, robbersProblem.maximizeThievery(housesAndValues));
     }
     
     @Test
     public void testMaximizeTheftEfficient4() {
-        RobbersProblemConstant robbersProblem = new RobbersProblemConstant();
+        RobbersProblemLinear robbersProblem = new RobbersProblemLinear();
         Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,8,9,12,1,2,3,12,3,12,32,1,102,1000,2,2,1,2,101,1000,100));
         assertEquals(2083, robbersProblem.maximizeThievery(housesAndValues));
+    }
+    
+    /**
+     * Test for negative input on linear time solution
+     */
+    @Test
+    public void testNegativeInputLinearTime() {
+        RobbersProblemLinear robbersProblem = new RobbersProblemLinear();
+        Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,8,-9,12,1,2,3,12,3,12,32,1,102,1000,2,2,1,2,101,1000,100));
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            robbersProblem.maximizeThievery(housesAndValues);
+        });
+    }
+    
+    
+    /**
+     * Test for negative input on exponential time solution
+     */
+    @Test
+    public void testNegativeInputExponentialTime() {
+        RobbersProblemExponential robbersProblem = new RobbersProblemExponential();
+        Vector<Integer> housesAndValues = new Vector<>(Arrays.asList(3,2,3,4,4,6,7,-8,9,12,1,2,3,12,3,12,32,1,102,1000,2,2,1,2,101,1000,100));
+        
+        assertThrows(IllegalArgumentException.class, () -> {
+            robbersProblem.maximizeThievery(housesAndValues);
+        });
     }
     
 }

@@ -1,0 +1,18 @@
+cd /Users/derekleblanc/Documents/repos/personal/interviews/logitech_interview/Question1; JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-12.jdk/Contents/Home "/Applications/NetBeans/Apache NetBeans 11.1.app/Contents/Resources/NetBeans/java/maven/bin/mvn" "-Dexec.args=-classpath %classpath Launch" -Dexec.executable=/Library/Java/JavaVirtualMachines/jdk-12.jdk/Contents/Home/bin/java org.codehaus.mojo:exec-maven-plugin:1.5.0:exec
+Running NetBeans Compile On Save execution. Phase execution is skipped and output directories of dependency projects (with Compile on Save turned on) will be used instead of their jar artifacts.
+Scanning for projects...
+                                                                        
+------------------------------------------------------------------------
+Building Question1 1.0-SNAPSHOT
+------------------------------------------------------------------------
+
+--- exec-maven-plugin:1.5.0:exec (default-cli) @ Question1 ---
+Maximum we can steal from [1, 2, 3, 1] is 4
+Maximum we can steal from [3, 2, 3, 4, 4, 6, 7, 8, 9, 12, 1, 2, 3, 12, 3, 12, 32, 1, 102, 1000, 2, 2, 1, 2, 101, 1000, 100] is 2083
+------------------------------------------------------------------------
+BUILD SUCCESS
+------------------------------------------------------------------------
+Total time: 0.515 s
+Finished at: 2019-08-11T15:53:35-03:00
+Final Memory: 7M/37M
+------------------------------------------------------------------------
