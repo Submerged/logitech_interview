@@ -6,7 +6,7 @@
 ### How to run
 This question uses a maven-based project that was written and tested in NetBeans 11.1 with Java 12. I make use of some Java 8+ concepts like Lambda functions and stream().
 
-The pom.xml file is included which encapsulates and dependencies.
+The pom.xml file is included which encapsulates the dependencies.
 
 The Launch.java file contains our main method and runs a simple and a more complex example of the problem being solved.
 ### Approach
@@ -28,7 +28,7 @@ Maximum we can steal from [1, 2, 3, 1] is 4
 ### How to run
 This question uses a maven-based project that was written and tested in NetBeans 11.1 with Java 12. I make use of some Java 8+ concepts like Lambda functions and stream().
 
-The pom.xml file is included which encapsulates and dependencies. The only one I used in the main application is apache-lang to provide some quick notNull and notBlank validation in my constructor
+The pom.xml file is included which encapsulates the dependencies. The only library I used in the main application is apache-lang to provide some quick validation in my constructor (notBlank, notNull..etc)
 
 The BuildOrganization.java file contains the main method and create the organizational structure that was asked for and prints it out afterwards.
 ### Approach
@@ -43,19 +43,19 @@ I tried to stick to the basics here and not get too fancy. My primary concern wa
 4. There is a single class of Employee. If we wanted to get fancier we  may make Employee an abstract class and subclass it for other types of Employees like CEO, VP, Manager since they all come with their own behaviour / data I'm sure. Again, outside of the scope of this question.
 ### Sample Output
 ```
---John Last
+--John
 Subordinates:
-	Mary Last
+	Mary
 
-	--Mary Last
+	--Mary
 	Subordinates:
-		Sam Last
-		Will Last
+		Sam
+		Will
 
-		--Will Last
+		--Will
 		Subordinates:
-			Jackie Last
-			Frank Last
-	Peter Last
-	Michael Last
+			Jackie
+			Frank
+	Peter
+	Michael
 ```
