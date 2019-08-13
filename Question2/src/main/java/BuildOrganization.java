@@ -35,5 +35,8 @@ public class BuildOrganization {
         
         //Print entire org structure
         employeeRegistry.printOrganization();
+        
+        
+        employeeRegistry.getEmployeeSharedSuperior(employeeWill, employeeMichael);
     }
 }

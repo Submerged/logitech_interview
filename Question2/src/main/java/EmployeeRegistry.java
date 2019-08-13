@@ -29,6 +29,35 @@ public class EmployeeRegistry {
         this.CEO = root;
     }
     
+    public void getEmployeeSharedSuperior(Employee employeeOne, Employee employeeTwo){
+        Validate.notNull(employeeOne);
+        Validate.notNull(employeeTwo);
+        
+        if(!employeeOne.getGivenName().equals(employeeTwo.getGivenName())){
+            Employee employeeOneToReturn = employeeOne;
+            Employee employeeTwoToReturn = employeeTwo;
+            
+            if(employeeOneToReturn.getCurrentBoss() != null){
+                employeeOneToReturn = employeeOneToReturn.getCurrentBoss();
+            }
+            
+            if(employeeOneToReturn.getCurrentBoss() != null){
+                employeeTwoToReturn = employeeTwoToReturn.getCurrentBoss();
+            }
+            
+            System.out.println(String.format("Calling %s %s", employeeOneToReturn.getGivenName(), employeeTwoToReturn.getGivenName()));
+            getEmployeeSharedSuperior(employeeOneToReturn, employeeTwoToReturn);
+        }else{
+            System.out.println(String.format("Common boss is %s", employeeOne.getGivenName()));
+        }
+        
+        //Stop condititopon
+        if(employeeOne.getCurrentBoss() == null && employeeTwo.getCurrentBoss() == null){
+            return;
+        }
+    }
+    
+    
     /**
      * Adds a single employee to the registry and link them to their boss
      * @param newEmployee employee we want to add to organization

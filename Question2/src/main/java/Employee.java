@@ -56,6 +56,7 @@ public class Employee {
         this.geographicRegion = geographicRegion;
         this.address = address;
         this.postalCode = postalCode;
+        this.currentBoss = null;
         
     }
     
@@ -192,9 +193,11 @@ public class Employee {
      */
     public Employee getCurrentBoss() {
         if(currentBoss == null){
-            throw new IllegalArgumentException("This individual has no boss...this should be the CEO");
+            //throw new IllegalArgumentException("This individual has no boss...this should be the CEO");
+            return null;
+        }else{
+            return currentBoss;
         }
-        return currentBoss;
     }
     
     /**
